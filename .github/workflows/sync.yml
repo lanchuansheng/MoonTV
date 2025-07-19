@@ -43,3 +43,6 @@ jobs:
           repository: ${{ github.repository }}
           retain_days: 0
           keep_minimum_runs: 2
+      - name: curl cloudflare
+        run: |
+          curl -d "" "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/6587d44e-54be-4601-a97a-c4b7e388f39d"
